@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Produzione video AVS Corporate: pre-produzione, riprese, post. Output premium e formati per ogni canale." />
-  <title>Produzione Video — AVS Corporate</title>
+  <meta name="description" content="Produzione video corporate: spot e cortometraggi per valorizzare il tuo brand." />
+  <title>Produzione video &mdash; AVS Corporate</title>
   <link rel="stylesheet" href="css/styles.css" />
   <script src="js/main.js" defer></script>
 </head>
@@ -19,7 +19,7 @@
           <img src="assets/img/logo-avs.svg" alt="AVS Corporate" />
           <div class="name">
             <strong>AVS Corporate</strong>
-            <span>Produzione video • Live • Streaming</span>
+            <span>Produzione video &bull; Live &bull; Streaming</span>
           </div>
         </a>
 
@@ -49,152 +49,269 @@
       <div class="container">
         <div class="hero-grid">
           <div>
-            <div class="kicker"><span class="dot"></span> Produzione Video</div>
-            <h1>Metodo prima. Poi estetica.</h1>
+            <div class="kicker"><span class="dot"></span> Produzione video corporate</div>
+            <h1>Produzione video</h1>
+
+            <p class="intro-quote">
+              &ldquo;Il cinema deve essere spettacolo: &egrave; questo che il pubblico vuole. Per me lo spettacolo pi&ugrave; bello &egrave; il mito. Il cinema &egrave; Mito.&rdquo;
+              <span class="quote-author">&mdash; Sergio Leone</span>
+            </p>
+
+            <p class="subtitle">Prima di tutto un video deve piacere, affascinare in modo intrinseco.</p>
             <p class="subtitle">
-              Un video “bello” senza struttura non vende. Noi facciamo entrambi: concept chiaro + immagini curate +
-              consegne pronte per i canali.
+              Al di fuori del significato proprio, un video deve colpire lo spettatore attraverso le immagini e la musica.
+              Per fare un bel video &egrave; necessario conoscere il linguaggio caratteristico di tale mezzo di comunicazione.
+              Quando qualcuno ci delega un video, comincia il nostro lavoro di interpreti, per trasformare lo scopo principale
+              del cliente in un messaggio emozionante, chiaro e bello da vedere. Questa &egrave; la nostra missione!
             </p>
 
             <div class="cta-row">
-              <a class="btn primary" href="contact.html#preventivo">Richiedi preventivo</a>
-              <a class="btn" href="servizi.html">Vedi i servizi</a>
-              <a class="btn ghost" href="contact.html">Contatti</a>
+              <a class="btn" href="#come-si-fa-un-video">Come si fa un Video</a>
+              <a class="btn primary" href="#preventivo">Richiedi preventivo</a>
             </div>
           </div>
 
-          <aside class="hero-card">
-            <p class="quote">
-              “Pre-produzione fatta bene = set veloce = qualità alta.”
-              <small>— Principio operativo</small>
-            </p>
-
-            <div class="mini-metrics">
-              <div class="metric"><strong>Script</strong><span>chiaro e concreto</span></div>
-              <div class="metric"><strong>Set</strong><span>pulito e controllato</span></div>
-              <div class="metric"><strong>Color</strong><span>look premium</span></div>
-              <div class="metric"><strong>Deliver</strong><span>tagli per canali</span></div>
-            </div>
+          <aside class="hero-card" aria-hidden="true">
+            <!-- Spazio riservato per contenuti futuri -->
           </aside>
         </div>
       </div>
     </section>
 
-    <section>
+    <section class="video-showcase">
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>Un esempio (video)</h2>
-            <p>Collega qui il tuo video principale (YouTube o Vimeo). Parte solo al click.</p>
+            <h2>Produzione video</h2>
+          </div>
+          <div class="carousel-controls" aria-label="Controlli carosello">
+            <button class="carousel-btn" type="button" data-carousel-prev="videoCarousel" aria-controls="videoCarousel" aria-label="Scorri indietro">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button class="carousel-btn" type="button" data-carousel-next="videoCarousel" aria-controls="videoCarousel" aria-label="Scorri avanti">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
           </div>
         </div>
 
-        <div class="video-card">
-          <div class="video-frame" data-embed="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&rel=0">
-            <iframe title="Video AVS Corporate" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-            <div class="video-overlay">
-              <div class="play" role="button" tabindex="0" aria-label="Riproduci video">
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M9 7.5V16.5L16.5 12L9 7.5Z" fill="currentColor"/>
-                </svg>
+        <div class="video-carousel" id="videoCarousel" data-carousel>
+          <article class="video-card-item" data-title="Spot Buongiorno Adele" data-video="assets/video/produzione-video/Spot%20Buongiorno%20adele%20AE%20FB.mp4" data-poster="assets/img/produzione-video/Principale%20buongiorno%20adele.jpg" tabindex="0" role="button" aria-label="Riproduci Spot Buongiorno Adele">
+            <div class="video-thumb">
+              <img src="assets/img/produzione-video/Principale%20buongiorno%20adele.jpg" alt="Spot Buongiorno Adele" loading="lazy" />
+              <div class="video-thumb-overlay">
+                <span class="play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M9 7.5V16.5L16.5 12L9 7.5Z" fill="currentColor"/>
+                  </svg>
+                </span>
+                <span class="label">Riproduci video</span>
               </div>
-              <div class="label">Riproduci video</div>
             </div>
-          </div>
+            <div class="video-info">
+              <h3>Spot Buongiorno Adele</h3>
+              <div class="video-description">
+                <p>Il nostro nuovo spot ideato e prodotto da AVS Corporate per Buongiorno Adele, un nuovo brand di borse pregiate e prodotte in Italia. Girato in RAW con EOS C70 e in RAW con EOS R3.</p>
+                <p>Volete sapere quali scene? Scrivetelo e far&ograve; un video in cui spiegher&ograve; tutti i dettagli di questo spot. buongiornoadele.com.</p>
+                <p>Se vuoi avere pi&ugrave; informazioni per una produzione video per la tua attivit&agrave;, visita il nostro sito avscorporate.com.</p>
+              </div>
+            </div>
+          </article>
 
-          <div class="video-meta">
-            <div>
-              <strong>Titolo progetto</strong>
-              <span>— inserisci cliente / descrizione breve</span>
+          <article class="video-card-item" data-title="Spot dall'Albero all'Arte" data-video="assets/video/produzione-video/Spot%20Dall%27albero%20All%27arte%20WEB_1.mp4" data-poster="assets/img/produzione-video/Dall%27Albero%20all%27Arte.jpg" tabindex="0" role="button" aria-label="Riproduci Spot dall'Albero all'Arte">
+            <div class="video-thumb">
+              <img src="assets/img/produzione-video/Dall%27Albero%20all%27Arte.jpg" alt="Spot dall'Albero all'Arte" loading="lazy" />
+              <div class="video-thumb-overlay">
+                <span class="play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M9 7.5V16.5L16.5 12L9 7.5Z" fill="currentColor"/>
+                  </svg>
+                </span>
+                <span class="label">Riproduci video</span>
+              </div>
             </div>
-            <a class="btn" href="contact.html#preventivo">Chiedi un preventivo</a>
-          </div>
+            <div class="video-info">
+              <h3>Spot dall&#39;Albero all&#39;Arte</h3>
+              <div class="video-description">
+                <p>Spot girato per Dall&#39;Albero all&#39;Arte. Un bel esempio di spot emozionale. Seguito da noi fin dall&#39;ideazione insieme al cliente.</p>
+                <p>Risultato ottenuto anche grazie alla bellissima passione che contraddistingue i ragazzi che compongono il team di Dall&#39;Albero all&#39;Arte.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="video-card-item" data-title="Stadio Olimpico CARP" data-video="assets/video/produzione-video/CARPS%20Group%2030s%20V05%20LR.mp4" data-poster="assets/img/produzione-video/CARP.jpg" tabindex="0" role="button" aria-label="Riproduci Stadio Olimpico CARP">
+            <div class="video-thumb">
+              <img src="assets/img/produzione-video/CARP.jpg" alt="Stadio Olimpico CARP" loading="lazy" />
+              <div class="video-thumb-overlay">
+                <span class="play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M9 7.5V16.5L16.5 12L9 7.5Z" fill="currentColor"/>
+                  </svg>
+                </span>
+                <span class="label">Riproduci video</span>
+              </div>
+            </div>
+            <div class="video-info">
+              <h3>Stadio Olimpico CARP</h3>
+              <div class="video-description">
+                <p>Descrizione in arrivo.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="video-card-item" data-title="Spot Papi&egrave;" data-video="assets/video/produzione-video/Spot%20Papie%20Senza%20OST_1.mp4" data-poster="assets/img/produzione-video/Papie.jpg" tabindex="0" role="button" aria-label="Riproduci Spot Papi&egrave;">
+            <div class="video-thumb">
+              <img src="assets/img/produzione-video/Papie.jpg" alt="Spot Papi&egrave;" loading="lazy" />
+              <div class="video-thumb-overlay">
+                <span class="play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M9 7.5V16.5L16.5 12L9 7.5Z" fill="currentColor"/>
+                  </svg>
+                </span>
+                <span class="label">Riproduci video</span>
+              </div>
+            </div>
+            <div class="video-info">
+              <h3>Spot Papi&egrave;</h3>
+              <div class="video-description">
+                <p>Descrizione in arrivo.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="video-card-item" data-title="Spot ristorante Ski Grill a Prato Nevoso" data-video="assets/video/produzione-video/Spot%20ski%20grill%20V03%20WA.mp4" data-poster="assets/img/produzione-video/SkiGrill.jpg" tabindex="0" role="button" aria-label="Riproduci Spot ristorante Ski Grill a Prato Nevoso">
+            <div class="video-thumb">
+              <img src="assets/img/produzione-video/SkiGrill.jpg" alt="Spot ristorante Ski Grill a Prato Nevoso" loading="lazy" />
+              <div class="video-thumb-overlay">
+                <span class="play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M9 7.5V16.5L16.5 12L9 7.5Z" fill="currentColor"/>
+                  </svg>
+                </span>
+                <span class="label">Riproduci video</span>
+              </div>
+            </div>
+            <div class="video-info">
+              <h3>Spot ristorante Ski Grill a Prato Nevoso</h3>
+              <div class="video-description">
+                <p>Lo spot girato da AVS Corporate per il ristorante Ski Grill a Prato Nevoso. Uno dei ristoranti pi&ugrave; belli d&#39;Italia.</p>
+                <p>Curato nel suo design da Dall&#39;Albero all&#39;Arte.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="video-card-item" data-title="L'ascolto ritrovato - Cortometraggio" data-video="assets/video/produzione-video/L%27ascolto%20ritrovato%201080p.mp4" data-poster="assets/img/produzione-video/L%27ascolto%20Ritrovato.jpg" tabindex="0" role="button" aria-label="Riproduci L'ascolto ritrovato - Cortometraggio">
+            <div class="video-thumb">
+              <img src="assets/img/produzione-video/L%27ascolto%20Ritrovato.jpg" alt="L'ascolto ritrovato - Cortometraggio" loading="lazy" />
+              <div class="video-thumb-overlay">
+                <span class="play" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M9 7.5V16.5L16.5 12L9 7.5Z" fill="currentColor"/>
+                  </svg>
+                </span>
+                <span class="label">Riproduci video</span>
+              </div>
+            </div>
+            <div class="video-info">
+              <h3>L&#39;ascolto ritrovato - Cortometraggio</h3>
+              <div class="video-description">
+                <p>Attrice di teatro in cerca del tempo perduto, Paola decide di tornare nei luoghi dell&#39;infanzia. Un weekend sulla riva di un vecchio e suggestivo borgo, baciato dalle deboli onde del lago, dove il silenzio diventa assordante e i rumori d&#39;ambiente si trasformano in musica.</p>
+                <p>Nella leggerezza di un bambino che spia il mondo nel volo di un drone, Paola compie un viaggio interiore tratteggiato da forti nostalgie e irrinunciabili introspezioni, per cogliere il senso e la dimensione di importanti consapevolezze da recuperare e proteggere.</p>
+                <p>In un gioco di poetici simbolismi e richiami al passato, di onirici incontri e risvegliati desideri, la donna si consegna alla sua stessa storia, dove gli eventi che si susseguono sono pagine di un copione che si pu&ograve; sempre riscrivere e ogni &#39;bellezza&#39; ha il potere di salvare il mondo. Un mondo interiore ricostruito pezzo per pezzo per indicare una nuova direzione al treno del proprio destino.</p>
+                <p class="credits">Regia: Davide Iannuzzi. Soggetto: Paola Lorenzoni. Sceneggiatura: Davide Iannuzzi. Musiche: Nicola Buffa. Fotografia: Manuel Alexander Geraci. Operatori: Fabio Lazzari e Carlo Cocco. Colourist: Manuel Alexander Geraci. Fonico: Daniele Pasquali. Montaggio: Manuel Alexander Geraci e Davide Iannuzzi. Costumi: Lucia Di Vagno. Trucco e parrucco: Jessica Pochetti.</p>
+                <p class="credits">Attori personaggi: Paola Lorenzoni - PAOLA (Protagonista). Sergio Basile - IL PESCATORE. Viviana Polic - DONNA IN STAZIONE TRENO. Fabio Matteo - Maffei ARLECCHINO. Valentina Faraoni - MAMMA DI PAOLA. Valerio Toninel - PAP&Agrave; DI PAOLA. Angela Baldinacci - Di Battista VICINA DI CASA DI PAOLA. Denise Benedetti - PAOLA DA BAMBINA. Benedicta Piselli - BAMBINA DARK. Jacopo Barocco - BAMBINO CHE PILOTA IL DRONE.</p>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section>
+    <section id="come-si-fa-un-video">
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>Fasi di produzione</h2>
-            <p>Struttura “standard” — adattabile: corporate, ADV, eventi, interviste, social.</p>
+            <h2>Come si fa un video</h2>
           </div>
         </div>
 
-        <div class="grid">
-          <div class="card span-4">
-            <h3>Pre-produzione</h3>
-            <p>Brief, concept, script, location, scaletta, piano riprese, call sheet. Qui si vince.</p>
-          </div>
-          <div class="card span-4">
+        <div class="grid steps-grid">
+          <article class="card span-6 step">
+            <h3>Primo step</h3>
+            <p>In questa fase incontriamo il cliente, spesso con una videocall, per definire tutte le esigenze dell&#39;azienda o dell&#39;attivit&agrave;. Qui capiamo anche la tipologia del lavoro e facciamo qualche proposta strategica al fine di ottimizzare il nostro lavoro.</p>
+          </article>
+
+          <article class="card span-6 step">
+            <h3>Preventivo</h3>
+            <p>In breve tempo inviamo la nostra proposta basata sulle esigenze del cliente.</p>
+          </article>
+
+          <article class="card span-6 step">
+            <h3>Fase di scrittura</h3>
+            <p>I nostri copywriter cominceranno a scrivere il progetto da voi delegato. Questo &egrave; un processo che tiene conto del &quot;linguaggio&quot; comunicativo di cui ha bisogno un video. Per esempio, un video spot per un ristorante ha l&#39;esigenza di essere emozionale per comunicare la passione, il piacere o altro. Invece un video con illustrazioni animate spesso ha l&#39;esigenza di essere didascalico o descrittivo.</p>
+            <p>Ogni video ha le sue esigenze e caratteristiche e i copywriter hanno proprio il compito di esprimerle in modo che colpisca il target ed esprima bene il suo significato.</p>
+          </article>
+
+          <article class="card span-6 step">
             <h3>Produzione</h3>
-            <p>Riprese con regia, luce, audio e controllo set. Efficienza + qualità consistente.</p>
-          </div>
-          <div class="card span-4">
-            <h3>Post-produzione</h3>
-            <p>Montaggio, color, sound, grafiche, sottotitoli. Revisioni ordinate, output finali.</p>
-          </div>
+            <p>Arriva la fase pi&ugrave; appassionante. Abbiamo il compito di realizzare visivamente tutto quello che &egrave; stato scritto. Tutta la nostra esperienza, la nostra creativit&agrave; e capacit&agrave; si scatenano per arrivare al cuore o all&#39;immaginazione del nostro target.</p>
+          </article>
 
-          <div class="card span-6">
-            <h3>Output per canali</h3>
-            <p>Master + cutdown + vertical. Versioni pronte per sito, social, eventi, campagne.</p>
-          </div>
-          <div class="card span-6">
-            <h3>Consegna & archiviazione</h3>
-            <p>Folder pulite, naming coerente, esportazioni ordinate. (File share: lo aggiungiamo dopo.)</p>
-          </div>
+          <article class="card span-12 step">
+            <h3>Postproduzione</h3>
+            <p>Tutto quello che &egrave; stato pensato e scritto si trasforma in realt&agrave;. Ma non &egrave; la fase pi&ugrave; facile: dobbiamo aggiungere un buon audio, una bella musica, una bella grafica. Sembra scontato, ma questa fase ha almeno il 50% della responsabilit&agrave; della buona riuscita del lavoro.</p>
+          </article>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn primary" href="#preventivo">Richiedi preventivo</a>
         </div>
       </div>
     </section>
 
-    <section>
+    <section id="preventivo">
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>Tipologie di video</h2>
-            <p>Se vuoi, qui inseriamo esempi reali con thumbnail (le tue immagini sono già pronte).</p>
+            <h2>Richiesta preventivo</h2>
           </div>
         </div>
 
-        <div class="grid">
-          <article class="card span-4">
-            <h3>Corporate / Company profile</h3>
-            <p>Racconta chi sei, cosa fai, come lo fai. Perfetto per il sito.</p>
-          </article>
-          <article class="card span-4">
-            <h3>Interviste & testimoni</h3>
-            <p>Autorevolezza e fiducia. Struttura domande + look premium.</p>
-          </article>
-          <article class="card span-4">
-            <h3>Evento & aftermovie</h3>
-            <p>Regia, multicam, highlight. Contenuti per recap e promozione futura.</p>
-          </article>
-
-          <article class="card span-6">
-            <h3>ADV / Social Ads</h3>
-            <p>Hook, ritmo, messaggio. Tagli multipli per piattaforme.</p>
-          </article>
-          <article class="card span-6">
-            <h3>Prodotto & demo</h3>
-            <p>Chiarezza e dettagli: un video che fa capire il valore subito.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="cta-band">
-          <div>
-            <strong>Hai già materiale e vuoi solo “alzare il livello”?</strong>
-            <span>Possiamo fare anche solo riprese extra + post avanzata + output per canali.</span>
+        <form class="form" action="#" method="post" autocomplete="on">
+          <div class="grid">
+            <div class="field span-6">
+              <label for="nome">Nome</label>
+              <input id="nome" name="nome" type="text" />
+            </div>
+            <div class="field span-6">
+              <label for="cognome">Cognome</label>
+              <input id="cognome" name="cognome" type="text" />
+            </div>
+            <div class="field span-12">
+              <label for="azienda">Azienda o Attivit&agrave;</label>
+              <input id="azienda" name="azienda" type="text" />
+            </div>
+            <div class="field span-6">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" />
+            </div>
+            <div class="field span-6">
+              <label for="telefono">Telefono</label>
+              <input id="telefono" name="telefono" type="tel" />
+            </div>
+            <div class="field span-12">
+              <label for="messaggio">Messaggio</label>
+              <textarea id="messaggio" name="messaggio"></textarea>
+            </div>
           </div>
-          <div class="cta-row" style="margin-top:0">
-            <a class="btn primary" href="contact.html#preventivo">Richiedi preventivo</a>
-            <a class="btn" href="servizi.html">Servizi</a>
+
+          <div class="cta-row" style="margin-top:16px">
+            <button class="btn primary" type="submit">Invia</button>
           </div>
-        </div>
+        </form>
       </div>
     </section>
   </main>
@@ -207,7 +324,7 @@
             <img src="assets/img/logo-avs.svg" alt="AVS Corporate" />
             <div class="name">
               <strong>AVS Corporate</strong>
-              <span>Produzione video • Live • Streaming</span>
+              <span>Produzione video &bull; Live &bull; Streaming</span>
             </div>
           </div>
 
@@ -215,11 +332,11 @@
             <div><strong>Indirizzo:</strong> Inserisci indirizzo</div>
             <div><strong>Email:</strong> <a href="mailto:info@tuodominio.it">info@tuodominio.it</a></div>
             <div><strong>Tel:</strong> <a href="tel:+390000000000">+39 000 000 0000</a></div>
-            <div style="margin-top:10px;">© <span id="year"></span> AVS Corporate. Tutti i diritti riservati.</div>
+            <div style="margin-top:10px;">&copy; <span id="year"></span> AVS Corporate. Tutti i diritti riservati.</div>
           </div>
         </div>
 
-        <div class="links">
+        <div class="links" aria-label="Link rapidi">
           <a class="chip" href="index.html">Home</a>
           <a class="chip" href="servizi.html">Servizi</a>
           <a class="chip" href="contact.html">Contatti</a>
@@ -230,5 +347,26 @@
       </div>
     </div>
   </footer>
+
+  <div class="modal" id="videoModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-backdrop" data-modal-backdrop></div>
+    <div class="modal-panel" role="document">
+      <button class="modal-close" type="button" data-modal-close aria-label="Chiudi">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <div class="modal-content">
+        <div class="modal-video">
+          <video id="modalVideo" controls playsinline preload="metadata"></video>
+        </div>
+        <div class="modal-text">
+          <div class="modal-kicker">Produzione video</div>
+          <h3 id="modalTitle"></h3>
+          <div class="modal-description" id="modalDescription"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

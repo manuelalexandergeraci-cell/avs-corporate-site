@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Contatti AVS Corporate: richiedi un preventivo per produzione video, regia live e streaming." />
+  <title>Contatti — AVS Corporate</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+  <a class="skip" href="#content">Salta al contenuto</a>
+
+  <header>
+    <div class="container">
+      <div class="nav" role="navigation" aria-label="Principale">
+        <a class="brand" href="index.html" aria-label="Vai alla Home">
+          <img src="assets/img/logo-avs.svg" alt="AVS Corporate" />
+          <div class="name">
+            <strong>AVS Corporate</strong>
+            <span>Produzione video • Live • Streaming</span>
+          </div>
+        </a>
+
+        <nav class="menu" aria-label="Menu">
+          <a href="servizi.html">Servizi</a>
+          <a href="produzione-video.html">Produzione Video</a>
+          <a href="contact.html" aria-current="page">Contatti</a>
+          <a class="pill" href="contact.html#preventivo">Richiedi preventivo</a>
+        </nav>
+
+        <div class="nav-right">
+          <button class="icon-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu">Menu</button>
+        </div>
+      </div>
+
+      <div class="mobile-panel" id="mobileMenu" hidden>
+        <a href="servizi.html">Servizi</a>
+        <a href="produzione-video.html">Produzione Video</a>
+        <a href="contact.html" aria-current="page">Contatti</a>
+        <a href="contact.html#preventivo">Richiedi preventivo</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="kicker"><span class="dot"></span> Contatti</div>
+            <h1>Parliamo del tuo progetto.</h1>
+            <p class="subtitle">
+              Se mi dai obiettivo, tempi e canali, ti rispondo con una proposta concreta e un preventivo pulito.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn primary" href="#preventivo">Vai al form</a>
+              <a class="btn" href="mailto:info@tuodominio.it">Scrivi una mail</a>
+              <a class="btn ghost" href="tel:+390000000000">Chiama</a>
+            </div>
+          </div>
+
+          <aside class="hero-card">
+            <p class="quote">
+              “Brief chiaro = preventivo rapido = risultato migliore.”
+              <small>— Nota operativa</small>
+            </p>
+            <div class="mini-metrics">
+              <div class="metric"><strong>Tempo</strong><span>deadline & delivery</span></div>
+              <div class="metric"><strong>Canali</strong><span>sito, social, ADV</span></div>
+              <div class="metric"><strong>Output</strong><span>orizz./vertical</span></div>
+              <div class="metric"><strong>Budget</strong><span>range realistico</span></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Info rapide</h2>
+            <p>Metti qui i contatti reali (email, telefono, sede). Poi aggiungiamo eventualmente mappa e orari.</p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="card span-4">
+            <h3>Email</h3>
+            <p><a href="mailto:info@tuodominio.it">info@tuodominio.it</a></p>
+          </div>
+          <div class="card span-4">
+            <h3>Telefono</h3>
+            <p><a href="tel:+390000000000">+39 000 000 0000</a></p>
+          </div>
+          <div class="card span-4">
+            <h3>Sede</h3>
+            <p>Inserisci indirizzo / città</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="preventivo">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Richiedi un preventivo</h2>
+            <p>
+              Compila i campi essenziali. (L’invio “reale” lo colleghiamo al servizio che scegli: Netlify Forms, Formspree, o backend.)
+            </p>
+          </div>
+        </div>
+
+        <form class="form" name="preventivo" method="post" data-netlify="true">
+          <!-- Netlify richiede questo -->
+          <input type="hidden" name="form-name" value="preventivo" />
+
+          <div class="grid">
+            <div class="field span-6">
+              <label for="nome">Nome</label>
+              <input id="nome" name="nome" autocomplete="given-name" required />
+            </div>
+            <div class="field span-6">
+              <label for="cognome">Cognome</label>
+              <input id="cognome" name="cognome" autocomplete="family-name" required />
+            </div>
+
+            <div class="field span-6">
+              <label for="azienda">Azienda</label>
+              <input id="azienda" name="azienda" autocomplete="organization" />
+            </div>
+            <div class="field span-6">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+
+            <div class="field span-6">
+              <label for="telefono">Telefono</label>
+              <input id="telefono" name="telefono" type="tel" autocomplete="tel" />
+            </div>
+            <div class="field span-6">
+              <label for="tipo">Di cosa hai bisogno?</label>
+              <select id="tipo" name="tipo">
+                <option>Corporate / Istituzionale</option>
+                <option>ADV / Social</option>
+                <option>Evento / Regia live / Streaming</option>
+                <option>Intervista / Testimonial</option>
+                <option>Altro</option>
+              </select>
+            </div>
+
+            <div class="field span-12">
+              <label for="messaggio">Dettagli (obiettivo, tempi, canali, budget indicativo)</label>
+              <textarea id="messaggio" name="messaggio" required></textarea>
+            </div>
+
+            <div class="field span-12">
+              <button class="btn primary" type="submit">Invia richiesta</button>
+              <span style="display:block;margin-top:10px;color:rgba(255,255,255,.68);font-size:12px;">
+                Tip: se deployi su GitHub Pages, il form non invia da solo. Su Netlify invece funziona con <code>data-netlify</code>.
+              </span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="padding:0">
+            <img src="assets/img/logo-avs.svg" alt="AVS Corporate" />
+            <div class="name">
+              <strong>AVS Corporate</strong>
+              <span>Produzione video • Live • Streaming</span>
+            </div>
+          </div>
+
+          <div class="fine">
+            <div><strong>Indirizzo:</strong> Inserisci indirizzo</div>
+            <div><strong>Email:</strong> <a href="mailto:info@tuodominio.it">info@tuodominio.it</a></div>
+            <div><strong>Tel:</strong> <a href="tel:+390000000000">+39 000 000 0000</a></div>
+            <div style="margin-top:10px;">© <span id="year"></span> AVS Corporate. Tutti i diritti riservati.</div>
+          </div>
+        </div>
+
+        <div class="links">
+          <a class="chip" href="index.html">Home</a>
+          <a class="chip" href="servizi.html">Servizi</a>
+          <a class="chip" href="produzione-video.html">Produzione Video</a>
+          <a class="chip" href="#" rel="noopener">Instagram</a>
+          <a class="chip" href="#" rel="noopener">YouTube</a>
+          <a class="chip" href="#" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

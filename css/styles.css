@@ -316,6 +316,9 @@ section{ padding: 34px 0; }
   font-size: 20px;
   letter-spacing: -0.01em;
 }
+.steps-grid + .cta-row{
+  margin-top: 20px;
+}
 .section-head p{
   margin:0;
   color: var(--muted);
@@ -428,6 +431,10 @@ section{ padding: 34px 0; }
 }
 .video-showcase .section-head h2{
   font-size: 26px;
+  letter-spacing: -0.02em;
+}
+.steps-title{
+  font-size: clamp(26px, 3vw, 34px);
   letter-spacing: -0.02em;
 }
 .carousel-controls{

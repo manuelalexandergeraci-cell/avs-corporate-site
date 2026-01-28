@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Produzione video corporate, regia live e streaming. Video che fanno crescere il tuo brand." />
+  <title>AVS Corporate — Produzione Video</title>
+
+  <!-- Open Graph (opzionale, ma consigliato) -->
+  <meta property="og:title" content="AVS Corporate — Produzione Video" />
+  <meta property="og:description" content="Produzione video corporate, regia live e streaming. Video che fanno crescere il tuo brand." />
+  <!-- TODO: sostituisci con una tua immagine -->
+  <meta property="og:image" content="assets/img/og-cover.jpg" />
+
+  <style>
+    :root{
+      --bg: #0a0b10;
+      --bg2: #07080c;
+      --panel: rgba(255,255,255,0.06);
+      --panel2: rgba(255,255,255,0.09);
+      --border: rgba(255,255,255,0.14);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.68);
+      --soft: rgba(255,255,255,0.10);
+      --accent: #7cf0ff;
+      --accent2: #b38bff;
+
+      --shadow: 0 14px 50px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 26px;
+
+      --container: 1120px;
+    }
+
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin:0;
+      color: var(--text);
+      background:
+        radial-gradient(900px 500px at 20% 0%, rgba(124,240,255,.14), transparent 60%),
+        radial-gradient(900px 500px at 90% 10%, rgba(179,139,255,.12), transparent 55%),
+        radial-gradient(900px 900px at 50% 120%, rgba(124,240,255,.08), transparent 60%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      line-height: 1.5;
+      overflow-x:hidden;
+    }
+
+    a{ color: inherit; text-decoration:none; }
+    a:hover{ text-decoration:none; }
+
+    .skip{
+      position:absolute;
+      left:-999px; top:auto;
+      width:1px; height:1px;
+      overflow:hidden;
+    }
+    .skip:focus{
+      left:16px; top:16px;
+      width:auto; height:auto;
+      padding:10px 12px;
+      border-radius: 10px;
+      background: rgba(255,255,255,.14);
+      border:1px solid var(--border);
+      z-index:9999;
+    }
+
+    .container{
+      width: min(var(--container), calc(100% - 40px));
+      margin-inline:auto;
+    }
+
+    /* Header */
+    header{
+      position: sticky;
+      top:0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(10,11,16,.55);
+      border-bottom: 1px solid rgba(255,255,255,.10);
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding: 14px 0;
+      gap: 18px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      min-width: 180px;
+    }
+    .brand img{
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 18px rgba(0,0,0,.35));
+    }
+    .brand .name{
+      display:flex;
+      flex-direction:column;
+      line-height:1.1;
+    }
+    .brand .name strong{
+      font-size: 14px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .brand .name span{
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .menu{
+      display:flex;
+      align-items:center;
+      gap: 18px;
+    }
+    .menu a{
+      font-size: 13px;
+      color: rgba(255,255,255,.82);
+      padding: 10px 10px;
+      border-radius: 12px;
+      transition: background .2s ease, color .2s ease;
+    }
+    .menu a:hover{
+      background: rgba(255,255,255,.08);
+      color: rgba(255,255,255,.95);
+    }
+
+    .menu .pill{
+      border: 1px solid rgba(124,240,255,.35);
+      background: linear-gradient(180deg, rgba(124,240,255,.10), rgba(255,255,255,.04));
+      box-shadow: 0 10px 30px rgba(124,240,255,.06);
+    }
+
+    .nav-right{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+    }
+
+    .icon-btn{
+      display:none;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.06);
+      border-radius: 12px;
+      padding: 10px 12px;
+      color: rgba(255,255,255,.9);
+      cursor:pointer;
+    }
+
+    /* Mobile menu panel */
+    .mobile-panel{
+      display:none;
+      padding: 0 0 14px 0;
+    }
+    .mobile-panel a{
+      display:block;
+      padding: 12px 12px;
+      border-radius: 12px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      margin-top: 10px;
+      color: rgba(255,255,255,.88);
+    }
+
+    /* Hero */
+    .hero{
+      padding: 64px 0 34px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 28px;
+      align-items: start;
+    }
+    .kicker{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .kicker .dot{
+      width: 7px; height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 6px rgba(124,240,255,.12);
+    }
+
+    h1{
+      margin:0;
+      font-size: clamp(34px, 4.2vw, 56px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+    .subtitle{
+      margin: 14px 0 0;
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 58ch;
+    }
+    .cta-row{
+      display:flex;
+      gap: 12px;
+      margin-top: 22px;
+      flex-wrap: wrap;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.92);
+      transition: transform .15s ease, background .2s ease, border-color .2s ease;
+      font-size: 13px;
+      cursor:pointer;
+      user-select:none;
+    }
+    .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.08); }
+    .btn.primary{
+      border-color: rgba(124,240,255,.40);
+      background: linear-gradient(180deg, rgba(124,240,255,.18), rgba(255,255,255,.06));
+      box-shadow: 0 14px 36px rgba(124,240,255,.08);
+    }
+    .btn.ghost{
+      background: transparent;
+    }
+
+    .hero-card{
+      border: 1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border-radius: var(--radius2);
+      padding: 16px;
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position: relative;
+      min-height: 230px;
+    }
+    .hero-card::before{
+      content:"";
+      position:absolute;
+      inset:-120px -120px auto auto;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle at 30% 30%, rgba(179,139,255,.20), transparent 60%);
+      filter: blur(2px);
+      transform: rotate(12deg);
+      pointer-events:none;
+    }
+    .quote{
+      margin:0;
+      color: rgba(255,255,255,.90);
+      font-size: 14px;
+      line-height:1.6;
+    }
+    .quote small{
+      display:block;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .mini-metrics{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .metric{
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      border-radius: 16px;
+      padding: 12px;
+    }
+    .metric strong{
+      display:block;
+      font-size: 16px;
+      letter-spacing: -0.01em;
+    }
+    .metric span{
+      display:block;
+      margin-top: 2px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* Section base */
+    section{
+      padding: 34px 0;
+    }
+    .section-head{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap: 18px;
+      margin-bottom: 16px;
+    }
+    .section-head h2{
+      margin:0;
+      font-size: 20px;
+      letter-spacing: -0.01em;
+    }
+    .section-head p{
+      margin:0;
+      color: var(--muted);
+      font-size: 13px;
+      max-width: 70ch;
+    }
+
+    /* Video */
+    .video-card{
+      border: 1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border-radius: var(--radius2);
+      overflow:hidden;
+      box-shadow: var(--shadow);
+    }
+    .video-frame{
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background:
+        radial-gradient(800px 500px at 20% 0%, rgba(124,240,255,.15), transparent 60%),
+        radial-gradient(700px 500px at 85% 30%, rgba(179,139,255,.16), transparent 55%),
+        rgba(255,255,255,.04);
+    }
+    .video-frame iframe{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      border:0;
+      display:none;
+    }
+    .video-overlay{
+      position:absolute;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      gap: 10px;
+      padding: 18px;
+      text-align:center;
+    }
+    .play{
+      width: 64px;
+      height: 64px;
+      border-radius: 999px;
+      border: 1px solid rgba(124,240,255,.45);
+      background: rgba(255,255,255,.06);
+      box-shadow: 0 18px 50px rgba(0,0,0,.45);
+      display:grid;
+      place-items:center;
+      cursor:pointer;
+      transition: transform .15s ease, background .2s ease;
+    }
+    .play:hover{ transform: translateY(-1px) scale(1.02); background: rgba(255,255,255,.08); }
+    .play svg{ width: 18px; height:18px; margin-left:2px; }
+    .video-overlay .label{
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing:.06em;
+      text-transform: uppercase;
+    }
+    .video-meta{
+      display:flex;
+      justify-content:space-between;
+      gap: 12px;
+      padding: 14px 16px;
+      border-top: 1px solid rgba(255,255,255,.10);
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .video-meta strong{ font-size: 13px; }
+    .video-meta span{ font-size: 12px; color: var(--muted); }
+
+    /* Services grid */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 12px;
+    }
+    .card{
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.04);
+      border-radius: var(--radius);
+      padding: 16px;
+      transition: transform .15s ease, background .2s ease, border-color .2s ease;
+    }
+    .card:hover{
+      transform: translateY(-2px);
+      background: rgba(255,255,255,.06);
+      border-color: rgba(255,255,255,.14);
+    }
+    .card h3{
+      margin:0;
+      font-size: 14px;
+      letter-spacing: -0.01em;
+    }
+    .card p{
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .span-4{ grid-column: span 4; }
+    .span-6{ grid-column: span 6; }
+
+    /* Clients */
+    .logos{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      align-items:center;
+    }
+    .logo-pill{
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+      color: rgba(255,255,255,.82);
+      font-size: 12px;
+      letter-spacing:.02em;
+    }
+    .logo-pill img{
+      height: 20px;
+      width:auto;
+      display:block;
+      opacity:.9;
+      filter: grayscale(100%);
+    }
+
+    /* CTA band */
+    .cta-band{
+      border: 1px solid rgba(124,240,255,.24);
+      background:
+        radial-gradient(900px 500px at 20% 0%, rgba(124,240,255,.14), transparent 60%),
+        radial-gradient(900px 500px at 90% 10%, rgba(179,139,255,.12), transparent 55%),
+        rgba(255,255,255,.04);
+      border-radius: var(--radius2);
+      padding: 18px;
+      box-shadow: var(--shadow);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 14px;
+      flex-wrap:wrap;
+    }
+    .cta-band strong{ font-size: 14px; }
+    .cta-band span{ color: var(--muted); font-size: 12px; display:block; margin-top: 4px; }
+
+    /* Footer */
+    footer{
+      padding: 34px 0 44px;
+      border-top: 1px solid rgba(255,255,255,.10);
+      margin-top: 26px;
+      background: rgba(0,0,0,.12);
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 18px;
+      align-items:start;
+    }
+    .fine{
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .links{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content:flex-end;
+    }
+    .chip{
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+      padding: 10px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      color: rgba(255,255,255,.84);
+    }
+
+    /* Responsive */
+    @media (max-width: 920px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      .span-4{ grid-column: span 6; }
+      .footer-grid{ grid-template-columns: 1fr; }
+      .links{ justify-content:flex-start; }
+    }
+    @media (max-width: 680px){
+      .menu{ display:none; }
+      .icon-btn{ display:inline-flex; }
+      .mobile-panel{ display:block; }
+      .span-4{ grid-column: span 12; }
+      .span-6{ grid-column: span 12; }
+      .hero{ padding-top: 42px; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip" href="#content">Salta al contenuto</a>
+
+  <header>
+    <div class="container">
+      <div class="nav" role="navigation" aria-label="Principale">
+        <a class="brand" href="index.html" aria-label="Vai alla Home">
+          <!-- TODO: sostituisci con il tuo logo -->
+          <img src="assets/img/logo-avs.svg" alt="AVS Corporate" />
+          <div class="name">
+            <strong>AVS Corporate</strong>
+            <span>Produzione video • Live • Streaming</span>
+          </div>
+        </a>
+
+        <nav class="menu" aria-label="Menu">
+          <a href="servizi.html">Servizi</a>
+          <a href="produzione-video.html">Produzione Video</a>
+          <a href="contact.html">Contatti</a>
+          <a class="pill" href="contact.html#preventivo">Richiedi preventivo</a>
+        </nav>
+
+        <div class="nav-right">
+          <button class="icon-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu">
+            Menu
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-panel" id="mobileMenu" hidden>
+        <a href="servizi.html">Servizi</a>
+        <a href="produzione-video.html">Produzione Video</a>
+        <a href="contact.html">Contatti</a>
+        <a href="contact.html#preventivo">Richiedi preventivo</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="content">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="kicker"><span class="dot"></span> Corporate video production</div>
+            <h1>Video che alzano la percezione del tuo brand.</h1>
+            <p class="subtitle">
+              Produzione video corporate, regia live e streaming con un approccio pulito, cinematografico e orientato al risultato.
+              <!-- TODO: personalizza testi -->
+            </p>
+
+            <div class="cta-row">
+              <a class="btn primary" href="produzione-video.html">
+                Scopri la Produzione Video
+                <span aria-hidden="true">→</span>
+              </a>
+              <a class="btn" href="servizi.html">Vedi i Servizi</a>
+              <a class="btn ghost" href="contact.html">Contattaci</a>
+            </div>
+          </div>
+
+          <aside class="hero-card" aria-label="Nota editoriale">
+            <p class="quote">
+              “Il cinema è un modo divino di raccontare la vita.”
+              <small>— Inserisci qui la citazione esatta che vuoi usare</small>
+            </p>
+
+            <div class="mini-metrics" aria-label="Punti di forza">
+              <div class="metric">
+                <strong>End-to-end</strong>
+                <span>dal concept alla consegna</span>
+              </div>
+              <div class="metric">
+                <strong>Premium look</strong>
+                <span>luce, colore, suono</span>
+              </div>
+              <div class="metric">
+                <strong>Veloci</strong>
+                <span>tempi certi, processi chiari</span>
+              </div>
+              <div class="metric">
+                <strong>Affidabili</strong>
+                <span>live e streaming solidi</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Showreel / Video in evidenza</h2>
+            <p>Un assaggio del nostro stile: ritmo, pulizia, storytelling e attenzione ai dettagli.</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-frame" id="videoFrame" data-embed="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&rel=0">
+            <!-- iframe viene montato al click -->
+            <iframe id="videoIframe" title="Video AVS Corporate" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+
+            <div class="video-overlay" id="videoOverlay">
+              <div class="play" id="playBtn" role="button" tabindex="0" aria-label="Riproduci video">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M9 7.5V16.5L16.5 12L9 7.5Z" fill="currentColor"/>
+                </svg>
+              </div>
+              <div class="label">Riproduci video</div>
+            </div>
+          </div>
+
+          <div class="video-meta">
+            <div>
+              <strong>Titolo video</strong>
+              <span>— sostituisci con il progetto in evidenza</span>
+            </div>
+            <a class="btn" href="produzione-video.html">Vedi altri esempi</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIZI -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Servizi</h2>
+            <p>Pacchetti chiari, output curati, comunicazione semplice. Scegli il format giusto per il tuo obiettivo.</p>
+          </div>
+          <a class="btn" href="servizi.html">Tutti i servizi →</a>
+        </div>
+
+        <div class="grid" role="list">
+          <article class="card span-4" role="listitem">
+            <h3>Corporate & Brand Film</h3>
+            <p>Video istituzionali e di posizionamento: identità, valori, persone, processi.</p>
+          </article>
+
+          <article class="card span-4" role="listitem">
+            <h3>Video prodotto & ADV</h3>
+            <p>Spot brevi, contenuti performance e creatività pensata per piattaforme e campagne.</p>
+          </article>
+
+          <article class="card span-4" role="listitem">
+            <h3>Regia live & streaming</h3>
+            <p>Eventi, conferenze, webinar: gestione stabile, qualità audio/video e ridondanza.</p>
+          </article>
+
+          <article class="card span-6" role="listitem">
+            <h3>Post-produzione avanzata</h3>
+            <p>Montaggio, color, sound design, grafiche e sottotitoli. Consegnati in formati pronti per i canali.</p>
+          </article>
+
+          <article class="card span-6" role="listitem">
+            <h3>Formazione & consulenza</h3>
+            <p>Workflow, setup, team e pianificazione contenuti. Portiamo ordine e metodo nel tuo reparto media.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENTI -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Alcuni clienti</h2>
+            <p>Inserisci qui i loghi (meglio SVG/PNG trasparenti). Iniziamo con 8–12 e poi aumentiamo.</p>
+          </div>
+        </div>
+
+        <div class="logos" aria-label="Loghi clienti">
+          <!-- Opzione 1: testo -->
+          <span class="logo-pill">Cliente 1</span>
+          <span class="logo-pill">Cliente 2</span>
+          <span class="logo-pill">Cliente 3</span>
+          <span class="logo-pill">Cliente 4</span>
+          <span class="logo-pill">Cliente 5</span>
+
+          <!-- Opzione 2: immagini (sostituisci e decommenta)
+          <span class="logo-pill"><img src="assets/img/clients/cliente-1.svg" alt="Cliente 1"></span>
+          -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section>
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <strong>Vuoi un preventivo rapido e chiaro?</strong>
+            <span>Raccontaci obiettivo, tempi e budget: ti rispondiamo con una proposta concreta.</span>
+          </div>
+          <div class="cta-row" style="margin-top:0">
+            <a class="btn primary" href="contact.html#preventivo">Richiedi preventivo</a>
+            <a class="btn" href="contact.html">Contatti</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="padding:0">
+            <img src="assets/img/logo-avs.svg" alt="AVS Corporate" />
+            <div class="name">
+              <strong>AVS Corporate</strong>
+              <span>Produzione video • Live • Streaming</span>
+            </div>
+          </div>
+
+          <div class="fine">
+            <!-- TODO: personalizza -->
+            <div><strong>Indirizzo:</strong> Inserisci indirizzo</div>
+            <div><strong>Email:</strong> <a href="mailto:info@tuodominio.it">info@tuodominio.it</a></div>
+            <div><strong>Tel:</strong> <a href="tel:+390000000000">+39 000 000 0000</a></div>
+            <div style="margin-top:10px;">© <span id="year"></span> AVS Corporate. Tutti i diritti riservati.</div>
+          </div>
+        </div>
+
+        <div class="links" aria-label="Link rapidi">
+          <a class="chip" href="servizi.html">Servizi</a>
+          <a class="chip" href="produzione-video.html">Produzione Video</a>
+          <a class="chip" href="contact.html">Contatti</a>
+          <!-- TODO: social -->
+          <a class="chip" href="#" rel="noopener">Instagram</a>
+          <a class="chip" href="#" rel="noopener">YouTube</a>
+          <a class="chip" href="#" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        const isOpen = menuBtn.getAttribute('aria-expanded') === 'true';
+        menuBtn.setAttribute('aria-expanded', String(!isOpen));
+        mobileMenu.hidden = isOpen;
+      });
+    }
+
+    // Video lazy embed on click
+    const frame = document.getElementById('videoFrame');
+    const overlay = document.getElementById('videoOverlay');
+    const iframe = document.getElementById('videoIframe');
+    const playBtn = document.getElementById('playBtn');
+
+    function startVideo(){
+      if (!frame || !iframe || !overlay) return;
+      const url = frame.getAttribute('data-embed');
+      if (!url) return;
+      iframe.src = url;
+      iframe.style.display = 'block';
+      overlay.style.display = 'none';
+    }
+
+    if (playBtn) {
+      playBtn.addEventListener('click', startVideo);
+      playBtn.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') startVideo();
+      });
+    }
+  </script>
+</body>
+</html>

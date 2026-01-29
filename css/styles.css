@@ -776,6 +776,10 @@ footer{
   .span-6{ grid-column: span 12; }
   .hero{ padding-top: 42px; }
   .video-carousel{ grid-auto-columns: 100%; }
+  .brand{ min-width: 180px; }
+  .brand img{ width: 40px; height: 40px; }
+  .brand .name strong{ font-size: 14px; }
+  .brand .name span{ font-size: 12px; }
 }
 
 /* Steps stack */

@@ -76,11 +76,11 @@ header{
   display:flex;
   align-items:center;
   gap: 12px;
-  min-width: 180px;
+  min-width: 360px;
 }
 .brand img{
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
   filter: drop-shadow(0 8px 18px rgba(0,0,0,.35));
 }
@@ -90,12 +90,12 @@ header{
   line-height:1.1;
 }
 .brand .name strong{
-  font-size: 14px;
+  font-size: 28px;
   letter-spacing: .08em;
   text-transform: uppercase;
 }
 .brand .name span{
-  font-size: 12px;
+  font-size: 24px;
   color: var(--muted);
 }
 
